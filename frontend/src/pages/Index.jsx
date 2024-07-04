@@ -5,6 +5,7 @@ import { FaFacebookF } from 'react-icons/fa'
 import api from '../utils/api'
 import toast from 'react-hot-toast'
 
+import Image_Editor from '../assets/IE2.png'
 const Index = () => {
 
     const [type, setType] = useState('')
@@ -146,7 +147,9 @@ const Index = () => {
                 <div className='w-[93%] m-auto py-3'>
                     <div className='flex justify-between items-center'>
                         <div className='w-[80px] h-[48px]'>
-                            <img className='w-full h-full' src="https://static.canva.com/web/images/12487a1e0770d29351bd4ce4f87ec8fe.svg" alt="" />
+                        <img className='w-full h-full' src={Image_Editor} alt="Image Editor" />
+                 
+                            {/* <img className='w-full h-full' src="https://static.canva.com/web/images/12487a1e0770d29351bd4ce4f87ec8fe.svg" alt="" /> */}
                         </div>
                         <div className='flex gap-4'>
                             <button onClick={() => {
