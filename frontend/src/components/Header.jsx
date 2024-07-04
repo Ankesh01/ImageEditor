@@ -60,8 +60,9 @@ const Header = ({ components, design_id }) => {
         <div className='h-[60px] bg-gradient-to-r from-[#212122] via-[#27282b] to-[#2a2b2c] w-full'>
             <div className='flex justify-between px-10 items-center text-gray-300 h-full'>
                 <Link to='/'>
+                <div className='w-[80px] h-[48px]'>
                 <img className='w-full h-full' src={Image_Editor} alt="Image Editor" />
-                 
+                 </div>
                     {/* <img src="https://static.canva.com/web/images/12487a1e0770d29351bd4ce4f87ec8fe.svg" alt="" /> */}
                 </Link>
                 <span className='text-xl'>Mini Canva</span>
