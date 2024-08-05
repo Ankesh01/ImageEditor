@@ -39,10 +39,10 @@ const dbConnect = async () => {
   try {
     if (process.env.NODE_ENV === "local") {
       await mongoose.connect(process.env.LOCAL_DB_URI);
-      console.log("Local database is connect....");
+      console.log("Local database is connected....");
     } else {
       await mongoose.connect(process.env.MONGODB_URI);
-      console.log("Production database is connect....");
+      console.log("Production database is connected....");
     }
   } catch (error) {
     console.log("database connection failed");

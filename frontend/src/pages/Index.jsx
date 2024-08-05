@@ -140,6 +140,24 @@ const Index = () => {
                             </div>
                         </form>
                     }
+                     {
+                        type === 'guest' && <form onSubmit={user_login}>
+                            <div className='flex flex-col gap-3 mb-3 text-white'>
+                                <label htmlFor="email">Email</label>
+                                <input onChange={inputHandle} type="email" name='email' id='email' placeholder='email' value={"you-are-the-best@gmail.com"} className='px-3 py-2 rounded-md border outline-none border-[#5c5c5e] focus:border-purple-500 bg-transparent' />
+                            </div>
+                            <div className='flex flex-col gap-3 mb-3 text-white'>
+                                <label htmlFor="password">Password</label>
+                                <input onChange={inputHandle} type="password" name='password' id='password' placeholder='password' value={"you-are-the-best@gmail.com"} className='px-3 py-2 rounded-md border outline-none border-[#5c5c5e] focus:border-purple-500 bg-transparent' />
+                            </div>
+                            <div>
+                                <button disabled={loader} className='px-3 py-2 rounded-md bg-purple-500 w-full ounline-none hover:bg-purple-600 text-white'>{loader ? 'loading..' : 'Signin'}</button>
+                            </div>
+                           
+                       
+                        </form>
+                    }
+
 
                 </div>
             </div>
@@ -170,9 +188,9 @@ const Index = () => {
                     <h2 className='text-5xl text-[#c7c5c5] font-bold'>What will you design today?</h2>
                     <span className='text-[#aca9a9] text-2xl font-medium'>Canva makes it easy to create and share professional designs.</span>
                     <button onClick={() => {
-                        setType('signup')
+                        setType('guest')
                         setShow(true)
-                    }} className='py-2 w-[200px] text-center bg-purple-500  text-white transition-all hover:bg-purple-600 rounded-[5px] font-medium'>Signup for free</button>
+                    }} className='py-2 w-[200px] text-center bg-purple-500  text-white transition-all hover:bg-purple-600 rounded-[5px] font-medium'>Login as guest</button>
                 </div>
             </div>
         </div>
